@@ -1,447 +1,423 @@
 <!DOCTYPE html>
-<!-- saved from url=(0067)file:///Users/fenfen_liem/Desktop/Portfolio%20web/assets/index.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Profile</title>
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<link rel="stylesheet" href="Tancheekuangportfolio_files/css/main.css">
-	</head>
-	<body class="">
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CK Tan - AI &amp; Transformation Analyst</title>
+<meta name="description" content="AI & transformation analyst bridging finance and AI. Process improvement, automation enablement, and data-backed decisions." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#F6F4EF;
+    --paper-2:#EFEBE2;
+    --ink:#191C22;
+    --slate:#5A626E;
+    --teal:#0E6E68;
+    --teal-tint:#E7F0EF;
+    --ochre:#C57B33;
+    --line:#E2DDD3;
+    --line-2:#D5CEC1;
+    --display:"Fraunces",Georgia,serif;
+    --body:"Inter",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--body);font-size:17px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="file:///Users/fenfen_liem/Desktop/Portfolio%20web/index.html#" class="image avatar"><img src="Tancheekuangportfolio_files/avatar.jpg" alt=""></a>
-					<h1><strong>TAN CHEE KUANG <br> PORTFOLIO </strong><br>Data Analyst well versed in Azure Machine learning, R, Python, SQL and PowerBI
-<br></h1>
-				</div>
-			</header>
+  /* mono eyebrow / labels */
+  .eyebrow{
+    font-family:var(--mono);font-size:12px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--teal);font-weight:500;
+    display:inline-flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--teal);display:inline-block}
 
-		<!-- Main -->
-			<div id="main">
+  /* ---------- top bar ---------- */
+  .topbar{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(246,244,239,.86);backdrop-filter:blur(8px);z-index:20}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .mark{font-family:var(--mono);font-weight:600;letter-spacing:.04em;font-size:15px}
+  .mark span{color:var(--teal)}
+  .nav{display:flex;gap:26px;font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+  .nav a{text-decoration:none;color:var(--slate);transition:color .2s}
+  .nav a:hover{color:var(--ink)}
+  @media(max-width:640px){.nav{display:none}}
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>About Me<br></h2>
-						</header>
-						<p>My name is Chee Kuang. I am a digitally transformed accountant with over 10 years of experience. I have strong data analytical skills and can put data through machine learning models to convert it into meaningful information. I enjoy helping people solve their challenges with data analytics as I get to learn new concepts every day 
+  /* ---------- hero ---------- */
+  .hero{padding:76px 0 8px}
+  .hero h1{
+    font-family:var(--display);font-weight:600;
+    font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.02;
+    letter-spacing:-.015em;margin:.35em 0 .28em;
+    font-optical-sizing:auto;
+  }
+  .hero h1 em{font-style:italic;color:var(--teal)}
+  .lede{font-size:clamp(1.05rem,2.2vw,1.32rem);max-width:60ch;color:#333a44;margin:0 0 34px}
+  .lede b{color:var(--ink);font-weight:600}
 
-</p>
-						
-					</section>
+  /* signature flow */
+  .flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:0;border:1px solid var(--line-2);border-radius:12px;overflow:hidden;background:#fff;max-width:720px}
+  .flow .node{flex:1 1 0;min-width:150px;padding:18px 20px;position:relative}
+  .flow .node + .node{border-left:1px solid var(--line)}
+  .flow .step{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--ochre);text-transform:uppercase}
+  .flow .verb{font-family:var(--display);font-size:1.35rem;font-weight:600;margin-top:2px}
+  .flow .desc{font-size:13.5px;color:var(--slate);margin-top:3px;line-height:1.4}
+  .flow .arrow{position:absolute;right:-8px;top:50%;transform:translateY(-50%);z-index:2;background:#fff;color:var(--teal);width:16px;height:16px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line);font-size:11px}
+  @media(max-width:560px){
+    .flow{flex-direction:column}
+    .flow .node + .node{border-left:none;border-top:1px solid var(--line)}
+    .flow .arrow{display:none}
+  }
 
-				<!-- Two -->
-					<section id="two">
-						<h2>Recent Work</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="Tancheekuangportfolio_files/PBIX_DAX_VIEW.png" class="image fit thumb" style="cursor: pointer; outline: 0px;"><img src="Tancheekuangportfolio_files/PBIX_DAX.jpeg" alt=""></a>
-								<h3>Dynamic Time Intelligence Dashboard: Asset Performance</h3>
-								<p>This project showcases advanced DAX proficiency, featuring dynamic time intelligence calculations. Key techniques include labeling months with numbers and using MAX to identify the latest month. YTD calculations are achieved through <=MAX comparisons, ensuring accurate date range filtering. The implementation of SWITCH statements allows for context-aware calculations that adapt to user-selected time frames. This DAX-centric approach not only guarantees data accuracy but also significantly enhances the dashboard's performance and flexibility, demonstrating expertise in creating efficient, user-friendly BI solutions. </p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="Tancheekuangportfolio_files/Exrate_view 1.png" class="image fit thumb" style="cursor: pointer; outline: 0px;"><img src="Tancheekuangportfolio_files/PowerBI_exrate.jpg" alt=""></a>
-								<h3>Currency-Neutral Regional Performance Dashboard</h3>
-								<p>Leveraging Power BI and financial expertise, I developed a dashboard that separates regional performance from exchange rate fluctuations. This tool enables users to visualize controllable areas for improvement, facilitating data-driven decision-making by isolating operational factors from market influences. </p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="Tancheekuangportfolio_files/user engagementview.jpg" class="image fit thumb" style="cursor: pointer; outline: 0px;"><img src="Tancheekuangportfolio_files/user engagement.jpg" alt=""></a>
-								<h3>Leveraging Infographics for Enhanced User Engagement</h3>
-								<p>Within this project, I strategically employed infographics to captivate user interest, prompting them to participate in a voting process via WhatsApp. Furthermore, I crafted visually compelling decks to effectively communicate with our audience, ensuring maximum engagement and comprehension of the content presented.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="Tancheekuangportfolio_files/carview.jpg" class="image fit thumb" style="cursor: pointer; outline: 0px;"><img src="Tancheekuangportfolio_files/car.jpg" alt=""></a>
-								<h3>Predicting car mileage per galon with linear regression using R</h3>
-								<p>In this project, I used Linear Regression to train our AI for predicting car miles/gallon efficiency based on its other variables.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="Tancheekuangportfolio_files/attritionview.jpg" class="image fit thumb" style="cursor: pointer; outline: 0px;"><img src="Tancheekuangportfolio_files/attrition.jpg" alt=""></a>
-								<h3>Data queries and visualisation using PowerBI</h3>
-								<p>In this project, we used a combination of TSQL and PowerBI to visualise a dataset and interprete the reasons of high employee attrition rate.  </p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="Tancheekuangportfolio_files/flightview.jpg" class="image fit thumb" style="cursor: pointer; outline: 0px;"><img src="Tancheekuangportfolio_files/flightdelay.jpg" alt=""></a>
-								<h3>Predict flight delay using Azure machine learning</h3>
-								<p>In this project, we trained the machine with various models such as Boosted decision tree and Neural network regression, to optimise prediction on the minutes of arrival delay. </p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="Tancheekuangportfolio_files/crimeview.jpg" class="image fit thumb" style="cursor: pointer; outline: 0px;"><img src="Tancheekuangportfolio_files/crime.jpg" alt=""></a>
-								<h3>Predicting recurring criminal activity of ex convicts using R</h3>
-								<p>In this project, we explore a true case study of the use of AI in for court sentencing and its ethical issues. </p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="Tancheekuangportfolio_files/Azureview.jpg" class="image fit thumb" style="cursor: pointer; outline: 0px;"><img src="Tancheekuangportfolio_files/azure.jpg" alt=""></a>
-								<h3>AzureHDinsight</h3>
-								<p>In this project, we created a data warehousing account on Azure databrick and implemented the following services: <br>-Azure Synapse Analytics <br>-Dedicated SQL Pool
-<br>-Apache Spark Pool<br> -Power BI linked service</p>
-							</article>
-							
-						</div>
-						
-					</section>
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+  .btn{font-family:var(--mono);font-size:13px;letter-spacing:.03em;text-decoration:none;padding:11px 20px;border-radius:8px;transition:transform .15s,background .2s,color .2s}
+  .btn-solid{background:var(--ink);color:var(--paper)}
+  .btn-solid:hover{background:var(--teal);transform:translateY(-1px)}
+  .btn-ghost{border:1px solid var(--line-2);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink);transform:translateY(-1px)}
 
-				<!-- Three -->
-					<section id="three">
-						
-						
-						<div class="row">
-							
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3> Singapore<br></li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										98288232									</li>
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="mailto:Tan.chee.kuang@outlook.com">Tan.chee.kuang@outlook.com</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
+  /* ---------- section scaffolding ---------- */
+  section{padding:70px 0}
+  .sec-head{margin-bottom:38px}
+  .sec-head h2{font-family:var(--display);font-weight:600;font-size:clamp(1.7rem,3.6vw,2.4rem);letter-spacing:-.01em;margin:.4em 0 0}
+  .divider{height:1px;background:var(--line);border:0;margin:0}
 
-				<!-- Four -->
-				<!--
-					<section id="four">
-						<h2>Elements</h2>
+  /* what I do */
+  .cap-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  @media(max-width:720px){.cap-grid{grid-template-columns:1fr}}
+  .cap{border-top:2px solid var(--ink);padding-top:16px}
+  .cap h3{font-family:var(--display);font-size:1.25rem;font-weight:600;margin:0 0 6px}
+  .cap p{margin:0;color:#3a424c;font-size:15.5px}
+  .cap .k{font-family:var(--mono);font-size:11px;color:var(--teal);letter-spacing:.1em;text-transform:uppercase}
 
-						<section>
-							<h4>Text</h4>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-							<hr />
-							<header>
-								<h4>Heading with a Subtitle</h4>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<header>
-								<h5>Heading with a Subtitle</h5>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<hr />
-							<h2>Heading Level 2</h2>
-							<h3>Heading Level 3</h3>
-							<h4>Heading Level 4</h4>
-							<h5>Heading Level 5</h5>
-							<h6>Heading Level 6</h6>
-							<hr />
-							<h5>Blockquote</h5>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-							<h5>Preformatted</h5>
-							<pre><code>i = 0;
+  /* AI projects (featured) */
+  .ai{background:var(--ink);color:var(--paper);border-radius:20px;padding:56px 0}
+  .ai .wrap{max-width:calc(var(--maxw) - 8px)}
+  .ai .eyebrow{color:#e8b06a}
+  .ai .eyebrow::before{background:#e8b06a}
+  .ai h2{color:var(--paper)}
+  .ai-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:8px}
+  @media(max-width:720px){.ai-grid{grid-template-columns:1fr}}
+  .proj{border:1px solid #2c313b;background:#20242c;border-radius:14px;padding:24px;transition:transform .18s,border-color .2s}
+  .proj:hover{transform:translateY(-3px);border-color:#3c8f88}
+  .proj .tag{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#8fd3cd}
+  .proj h3{font-family:var(--display);font-weight:600;font-size:1.32rem;margin:8px 0 8px;color:var(--paper)}
+  .proj p{margin:0;color:#c3c8d0;font-size:15px}
+  .proj .chips{margin-top:14px;display:flex;flex-wrap:wrap;gap:7px}
+  .proj .chips span{font-family:var(--mono);font-size:11px;color:#a7d8d3;border:1px solid #35404a;border-radius:20px;padding:3px 10px}
 
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
+  /* selected projects */
+  .sel{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  @media(max-width:720px){.sel{grid-template-columns:1fr}}
+  .card{border:1px solid var(--line);border-radius:14px;padding:26px;background:#fff;transition:transform .18s,box-shadow .2s}
+  .card:hover{transform:translateY(-3px);box-shadow:0 12px 30px -18px rgba(25,28,34,.35)}
+  .card .tag{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ochre)}
+  .card h3{font-family:var(--display);font-weight:600;font-size:1.28rem;margin:8px 0 8px}
+  .card p{margin:0;color:#3a424c;font-size:15px}
+  .card .preview{margin:-4px 0 18px}
+  .card .preview svg{width:100%;height:auto;display:block;border-radius:10px}
+  .card .preview a{display:block;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+  .card .preview img{width:100%;display:block}
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-						</section>
+  /* toolkit */
+  .tools{display:grid;grid-template-columns:180px 1fr;gap:14px 34px;align-items:baseline}
+  @media(max-width:560px){.tools{grid-template-columns:1fr;gap:4px 0}.tools .row-label{margin-top:14px}}
+  .row-label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);padding-top:6px}
+  .tagset{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .tagset span{font-family:var(--mono);font-size:12.5px;background:var(--teal-tint);color:#0b544f;border-radius:6px;padding:5px 11px}
 
-						<section>
-							<h4>Lists</h4>
-							<div class="row">
-								<div class="col-6 col-12-xsmall">
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<h5>Actions</h5>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Default</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions small">
-								<li><a href="#" class="button primary small">Small</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary fit">Default</a></li>
-										<li><a href="#" class="button fit">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small fit">Small</a></li>
-										<li><a href="#" class="button small fit">Small</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
+  /* background */
+  .bg-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+  @media(max-width:720px){.bg-grid{grid-template-columns:1fr;gap:26px}}
+  .bg-grid p{margin:0 0 14px;color:#3a424c}
+  .edu li{list-style:none;padding:12px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;font-size:15px}
+  .edu{margin:0;padding:0}
+  .edu .cred{font-weight:600}
+  .edu .inst{font-family:var(--mono);font-size:12px;color:var(--slate);text-align:right}
 
-						<section>
-							<h4>Table</h4>
-							<h5>Default</h5>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
+  /* experience */
+  .xp{margin:0;padding:0}
+  .xp li{list-style:none;padding:14px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:15px}
+  .xp .role b{display:block}
+  .xp .role span{color:var(--slate);font-size:14px}
+  .xp .when{font-family:var(--mono);font-size:12px;color:var(--slate);white-space:nowrap;padding-top:4px}
 
-							<h5>Alternate</h5>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
+  /* footer */
+  footer{background:var(--paper-2);border-top:1px solid var(--line);padding:60px 0 46px;margin-top:20px}
+  footer h2{font-family:var(--display);font-weight:600;font-size:clamp(1.8rem,4vw,2.6rem);margin:.2em 0 .4em}
+  footer a.mail{color:var(--teal);text-decoration:none;border-bottom:1px solid var(--line-2);font-weight:600}
+  footer a.mail:hover{border-color:var(--teal)}
+  .foot-meta{font-family:var(--mono);font-size:12px;color:var(--slate);margin-top:34px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .foot-meta a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--line-2)}
+  .foot-meta a:hover{color:var(--ink);border-color:var(--ink)}
 
-						<section>
-							<h4>Buttons</h4>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Primary</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button large">Large</a></li>
-								<li><a href="#" class="button">Default</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<ul class="actions fit">
-								<li><a href="#" class="button primary fit">Fit</a></li>
-								<li><a href="#" class="button fit">Fit</a></li>
-							</ul>
-							<ul class="actions fit small">
-								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-								<li><a href="#" class="button fit small">Fit + Small</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-							</ul>
-							<ul class="actions">
-								<li><span class="button primary disabled">Primary</span></li>
-								<li><span class="button disabled">Default</span></li>
-							</ul>
-						</section>
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+    .btn:hover,.proj:hover,.card:hover{transform:none}
+  }
+</style>
+</head>
+<body>
 
-						<section>
-							<h4>Form</h4>
-							<form method="post" action="#">
-								<div class="row gtr-uniform gtr-50">
-									<div class="col-6 col-12-xsmall">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<select name="demo-category" id="demo-category">
-											<option value="">- Category -</option>
-											<option value="1">Manufacturing</option>
-											<option value="1">Shipping</option>
-											<option value="1">Administration</option>
-											<option value="1">Human Resources</option>
-										</select>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Low Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Normal Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">High Priority</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy of this message</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-human" name="demo-human" checked>
-										<label for="demo-human">I am a human and not a robot</label>
-									</div>
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
+<div class="topbar">
+  <div class="wrap">
+    <div class="mark">CK<span>.</span>TAN</div>
+    <nav class="nav">
+      <a href="#work">Work</a>
+      <a href="#ai">AI Projects</a>
+      <a href="#selected">Builds</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
 
-						<section>
-							<h4>Image</h4>
-							<h5>Fit</h5>
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-								</div>
-							</div>
-							<h5>Left &amp; Right</h5>
-							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						</section>
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">AI &amp; Transformation Analyst</span>
+    <h1>I turn messy workflows into <em>measurable</em> outcomes.</h1>
+    <p class="lede">Accounting foundation, analyst instincts, and a builder's bias. I map how work actually happens, find where it breaks, and translate business needs into <b>AI, automation, and data solutions</b> that stick - across professional services, finance, and tax.</p>
 
-					</section>
-				-->
+    <div class="flow" aria-label="How I work: map, improve, automate">
+      <div class="node">
+        <div class="step">01 / Understand</div>
+        <div class="verb">Map</div>
+        <div class="desc">As-is workflows, gaps, and the numbers behind them.</div>
+        <div class="arrow">&rarr;</div>
+      </div>
+      <div class="node">
+        <div class="step">02 / Design</div>
+        <div class="verb">Improve</div>
+        <div class="desc">Future-state process, SOPs, and clear ownership.</div>
+        <div class="arrow">&rarr;</div>
+      </div>
+      <div class="node">
+        <div class="step">03 / Deliver</div>
+        <div class="verb">Automate</div>
+        <div class="desc">AI agents, RPA, and dashboards that hold up in production.</div>
+      </div>
+    </div>
 
-			</div>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="#ai">See AI projects</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</header>
 
-			<!-- Footer -->
-			
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://github.com/Kicks81" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://www.linkedin.com/in/chee-kuang-tan-b103697a/" class="icon brands fa-linkedin"><span class="label">Dribbble</span></a></li>
-					</ul>
-					
-				</div>
-			</footer>
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">What I do</span>
+      <h2>Four things, done well.</h2>
+    </div>
+    <div class="cap-grid">
+      <div class="cap reveal">
+        <div class="k">Process</div>
+        <h3>Improvement &amp; SOPs</h3>
+        <p>Review and map current workflows, surface governance and efficiency gaps, and design future-state processes with real ownership and controls.</p>
+      </div>
+      <div class="cap reveal">
+        <div class="k">Enablement</div>
+        <h3>AI &amp; automation</h3>
+        <p>Scope and coordinate LLM agents, intelligent document processing, and agentic workflows - from requirements to acceptance tests and success metrics.</p>
+      </div>
+      <div class="cap reveal">
+        <div class="k">Insight</div>
+        <h3>Data &amp; analytics</h3>
+        <p>Build predictive models and interactive dashboards that quantify impact and make the trade-offs legible to decision-makers.</p>
+      </div>
+      <div class="cap reveal">
+        <div class="k">Delivery</div>
+        <h3>Projects &amp; governance</h3>
+        <p>Run timelines, stakeholder communication, and data-security sign-offs across internal owners and external vendors.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<!-- Scripts -->
-			<script src="Tancheekuangportfolio_files/js/jquery.min.js"></script>
-			<script src="Tancheekuangportfolio_files/js/jquery.poptrox.min.js"></script>
-			<script src="Tancheekuangportfolio_files/js/browser.min.js"></script>
-			<script src="Tancheekuangportfolio_files/js/breakpoints.min.js"></script>
-			<script src="Tancheekuangportfolio_files/js/util.js"></script>
-			<script src="Tancheekuangportfolio_files/js/main.js"></script>
+<section id="ai" style="padding-top:0">
+  <div class="wrap">
+    <div class="ai">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Featured</span>
+          <h2>AI &amp; automation projects</h2>
+        </div>
+        <div class="ai-grid">
+          <article class="proj reveal">
+            <div class="tag">POC / Vendor-led</div>
+            <h3>Inbound email triage agent</h3>
+            <p>Scoped and coordinated a proof of concept that classifies shared-inbox client queries and auto-drafts renewal outreach for a corporate services team. Defined use cases, acceptance tests, and accuracy and draft-quality targets.</p>
+            <div class="chips"><span>LLM</span><span>Classification</span><span>Acceptance testing</span></div>
+          </article>
+          <article class="proj reveal">
+            <div class="tag">Pilot / Production readiness</div>
+            <h3>AI bookkeeping agent</h3>
+            <p>Coordinated readiness for an AI accounting and finance agent - cloud provisioning, app registration, and access governance - and escalated data-security risks for sign-off ahead of go-live.</p>
+            <div class="chips"><span>Agentic workflow</span><span>Access governance</span><span>Cloud</span></div>
+          </article>
+          <article class="proj reveal">
+            <div class="tag">Pilot / Operations</div>
+            <h3>Document intake &amp; classification</h3>
+            <p>Piloted LLM and OCR-based classification to cut the manual data-entry effort quantified in a process-discovery survey, where roughly 56% of weekly effort went to keying data.</p>
+            <div class="chips"><span>OCR</span><span>LLM</span><span>Process discovery</span></div>
+          </article>
+          <article class="proj reveal">
+            <div class="tag">Multi-agent / Pipeline</div>
+            <h3>Tax article writer</h3>
+            <p>Chained multiple expert agents - research, claim verification, article angle, and narrative - grounded in the author's previous articles, so she only enters a new topic and the system returns a publish-ready draft with edits in her own voice.</p>
+            <div class="chips"><span>Agent chaining</span><span>Claim verification</span><span>Style matching</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-	
-<div class="poptrox-overlay" style="position: fixed; left: 0px; top: 0px; z-index: 1000; width: 100%; height: 100%; text-align: center; cursor: pointer; opacity: 1; display: none;"><div style="display:inline-block;height:100%;vertical-align:middle;"></div><div style="position:absolute;left:0;top:0;width:100%;height:100%;background:#2c2c2c;opacity:0.85;filter:alpha(opacity=85);"></div><div class="poptrox-popup" style="display: none; vertical-align: middle; position: relative; z-index: 1; cursor: auto; min-width: 200px; min-height: 100px; width: auto; height: auto;"><div class="loader" style="display: none;"></div><div class="pic" style="text-indent: 0px; display: none;"></div><div class="caption" style="display: none;">Magna sed consequat tempus</div><span class="closer" style="cursor: pointer; display: none;"></span><div class="nav-previous" style="display: none;"></div><div class="nav-next" style="display: none;"></div></div></div><div class="poptrox-overlay" style="position: fixed; left: 0px; top: 0px; z-index: 1000; width: 100%; height: 100%; text-align: center; cursor: pointer; display: none;"><div style="display:inline-block;height:100%;vertical-align:middle;"></div><div style="position:absolute;left:0;top:0;width:100%;height:100%;background:#2c2c2c;opacity:0.85;filter:alpha(opacity=85);"></div><div class="poptrox-popup" style="display: none; vertical-align: middle; position: relative; z-index: 1; cursor: auto; min-width: 200px; min-height: 100px;"><div class="loader" style="display: none;"></div><div class="pic" style="display: none;"></div><div class="caption" style="display: none;"></div><span class="closer" style="cursor: pointer; display: none;"></span><div class="nav-previous" style="display: none;"></div><div class="nav-next" style="display: none;"></div></div></div><div class="poptrox-overlay" style="position: fixed; left: 0px; top: 0px; z-index: 1000; width: 100%; height: 100%; text-align: center; cursor: pointer; display: none;"><div style="display:inline-block;height:100%;vertical-align:middle;"></div><div style="position:absolute;left:0;top:0;width:100%;height:100%;background:#2c2c2c;opacity:0.85;filter:alpha(opacity=85);"></div><div class="poptrox-popup" style="display: none; vertical-align: middle; position: relative; z-index: 1; cursor: auto; min-width: 200px; min-height: 100px;"><div class="loader" style="display: none;"></div><div class="pic" style="display: none;"></div><div class="caption" style="display: none;"></div><span class="closer" style="cursor: pointer; display: none;"></span><div class="nav-previous" style="display: none;"></div><div class="nav-next" style="display: none;"></div></div></div></body></html>
+<section id="selected" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Selected builds</span>
+      <h2>Things I made with my own hands.</h2>
+    </div>
+    <div class="sel">
+      <div class="card reveal">
+        <div class="preview">
+          <a href="assets/ta_chart.png"><img src="assets/ta_chart.png" alt="Technical analysis platform: NVDA daily chart with EMA and Bollinger overlays, RSI, volume-profile levels, and TimesFM forecast marker" loading="lazy" /></a>
+        </div>
+        <div class="tag">AI trading platform / Python + React</div>
+        <h3>AI-assisted technical analysis platform</h3>
+        <p>Personal trading-analysis platform combining a vectorised backtesting engine, live trend, structure and volume signals, and options analytics - with a locally hosted LLM reading news sentiment and macro data into one unified dashboard. More views: <a href="assets/ta_volume.png">volume profile</a> &middot; <a href="assets/ta_predict.png">prediction log</a>.</p>
+      </div>
+      <div class="card reveal">
+        <div class="preview">
+          <a href="assets/tracker_expiry.png"><img src="assets/tracker_expiry.png" alt="Options portfolio tracker: positions grouped by expiration with strikes, current prices, probability OTM, and weekly exposure bar" loading="lazy" /></a>
+        </div>
+        <div class="tag">Python / Broker API</div>
+        <h3>Options portfolio tracker</h3>
+        <p>Python tracker for live option positions and P/L - pulling positions and quotes from broker APIs, reconciling portfolio and transaction history, and serving a real-time web dashboard of open positions, premiums, and expiries. More views: <a href="assets/tracker_wheeling.png">wheel trading tracker</a>.</p>
+      </div>
+      <div class="card reveal">
+        <div class="preview">
+          <a href="assets/meetingminds_en.png"><img src="assets/meetingminds_en.png" alt="MeetingMinds live session: transcript, streaming summary updates, Q&A answers and action items side by side" loading="lazy" /></a>
+        </div>
+        <div class="tag">ASR + LLM / BytePlus + OpenRouter</div>
+        <h3>MeetingMinds - live meeting assistant</h3>
+        <p>Live meeting assistant: captures audio, transcribes in real time with BytePlus ASR, and streams LLM-generated live summaries, role-aware flags, and Q&amp;A answers via OpenRouter - exporting the full meeting note to Obsidian. Handles English and Mandarin in the same meeting. More views: <a href="assets/meetingminds_zh.png">Mandarin session</a> &middot; <a href="https://github.com/Kicks81/meetingmind">GitHub</a>.</p>
+      </div>
+      <div class="card reveal">
+        <div class="preview">
+          <a href="assets/Exrate_view.png"><img src="assets/PowerBI_exrate.jpg" alt="Currency-neutral performance dashboard screenshot" loading="lazy" /></a>
+        </div>
+        <div class="tag">Power BI / DAX</div>
+        <h3>Currency-neutral performance dashboard</h3>
+        <p>Separated operational performance from exchange-rate movement using advanced DAX, so management could see the improvement areas actually within their control.</p>
+      </div>
+      <div class="card reveal">
+        <div class="preview">
+          <a href="assets/PBIX_DAX_VIEW.png"><img src="assets/PBIX_DAX.jpeg" alt="Dynamic time intelligence dashboard screenshot" loading="lazy" /></a>
+        </div>
+        <div class="tag">Power BI / DAX</div>
+        <h3>Dynamic time intelligence dashboard</h3>
+        <p>Asset-performance dashboard built on dynamic time-intelligence DAX - MAX-based latest-month detection, YTD range filtering, and SWITCH-driven context-aware calculations for fast, flexible reporting.</p>
+      </div>
+      <div class="card reveal">
+        <div class="preview">
+          <a href="assets/ainews_front.png"><img src="assets/ainews_front.png" alt="AINewsDaily front page: newspaper-style AI news layout with top story, source filters, and market tickers in the masthead" loading="lazy" /></a>
+        </div>
+        <div class="tag">News aggregator / Node + Playwright</div>
+        <h3>AINewsDaily - AI news, newspaper style</h3>
+        <p>Self-hosted, newspaper-style AI &amp; tech news aggregator: Playwright scrapers pull from Hacker News, TechCrunch, ArXiv, Dev.to, and Hugging Face every 15 minutes, with AI-generated article summaries, source and time filters, and live market tickers in the masthead. More views: <a href="assets/ainews_grid.webp">section grid</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="toolkit">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Toolkit</span>
+      <h2>What I reach for.</h2>
+    </div>
+    <div class="tools">
+      <div class="row-label">AI / Automation</div>
+      <div class="tagset"><span>Agentic workflows</span><span>Claude Code</span><span>Hermes</span><span>llama.cpp</span><span>Ollama</span><span>OpenRouter</span><span>RAG</span><span>UiPath RPA</span></div>
+      <div class="row-label">Analytics</div>
+      <div class="tagset"><span>Machine learning</span><span>Predictive modeling</span><span>Python</span><span>R</span><span>SQL</span></div>
+      <div class="row-label">Business systems</div>
+      <div class="tagset"><span>Asana</span><span>HubSpot</span><span>Xero</span></div>
+      <div class="row-label">Reporting</div>
+      <div class="tagset"><span>DAX</span><span>Excel</span><span>Power BI</span><span>Tableau</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="background" style="padding-top:0">
+  <div class="wrap">
+    <hr class="divider" style="margin-bottom:56px" />
+    <div class="bg-grid">
+      <div class="reveal">
+        <span class="eyebrow">Background</span>
+        <h2 style="font-family:var(--display);font-weight:600;font-size:1.9rem;margin:.4em 0 .5em">From ledgers to language models.</h2>
+        <p>I started in accounting - ACCA-qualified, years across shared services, corporate finance, and pricing - before moving into data and transformation work in finance and government.</p>
+        <p>That mix is the point. Domain fluency in finance and tax lets me translate cleanly between business teams, vendors, and technical implementers, so automation gets built for how the work really runs.</p>
+        <span class="eyebrow" style="margin-top:22px">Recent roles</span>
+        <ul class="xp" style="margin-top:14px">
+          <li><span class="role"><b>Transformation &amp; Business Analyst (Group Transformation)</b><span>InCorp Global (an Ascentium company)</span></span><span class="when">2026 - now</span></li>
+          <li><span class="role"><b>Data Analyst (Finance)</b><span>Frasers Hospitality</span></span><span class="when">2024 - 2025</span></li>
+          <li><span class="role"><b>Management Support Officer (Data &amp; Tech)</b><span>Ministry of Social and Family Development</span></span><span class="when">2022 - 2023</span></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Education</span>
+        <ul class="edu" style="margin-top:18px">
+          <li><span class="cred">Professional Diploma, Data Science</span><span class="inst">Lithan Academy</span></li>
+          <li><span class="cred">ACCA</span><span class="inst">Singapore Accountancy Academy</span></li>
+          <li><span class="cred">BSc, Applied Accounting</span><span class="inst">Oxford Brookes University</span></li>
+          <li><span class="cred">Diploma, Business Management</span><span class="inst">Nanyang Polytechnic</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2>Let's make a process better.</h2>
+    <p style="max-width:52ch;color:#3a424c;margin:0">Open to conversations on transformation, AI enablement, and analytics in professional services and finance.</p>
+    <p style="margin:22px 0 0;font-size:1.15rem"><a class="mail" href="mailto:Tan.chee.kuang@outlook.com">Tan.chee.kuang@outlook.com</a></p>
+    <div class="foot-meta">
+      <span>CK Tan / Singapore</span>
+      <span><a href="https://github.com/Kicks81">GitHub</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/chee-kuang-tan-b103697a/">LinkedIn</a></span>
+      <span>Built and maintained by hand</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    },{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  })();
+</script>
+</body>
+</html>
