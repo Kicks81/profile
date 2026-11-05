@@ -299,64 +299,6 @@
     <div class="sel">
       <div class="card reveal">
         <div class="preview">
-          <a href="assets/ta_chart.png"><img src="assets/ta_chart.png" alt="Technical analysis platform: NVDA daily chart with EMA and Bollinger overlays, RSI, volume-profile levels, and TimesFM forecast marker" loading="lazy" /></a>
-        </div>
-        <div class="tag">AI trading platform / Python + React</div>
-        <h3>AI-assisted technical analysis platform</h3>
-        <p>Personal trading-analysis platform combining a vectorised backtesting engine, live trend, structure and volume signals, and options analytics - with a locally hosted LLM reading news sentiment and macro data into one unified dashboard. More views: <a href="assets/ta_volume.png">volume profile</a> &middot; <a href="assets/ta_predict.png">prediction log</a>.</p>
-      </div>
-      <div class="card reveal">
-        <div class="preview">
-          <a href="assets/tracker_expiry.png"><img src="assets/tracker_expiry.png" alt="Options portfolio tracker: positions grouped by expiration with strikes, current prices, probability OTM, and weekly exposure bar" loading="lazy" /></a>
-        </div>
-        <div class="tag">Python / Broker API</div>
-        <h3>Options portfolio tracker</h3>
-        <p>Python tracker for live option positions and P/L - pulling positions and quotes from broker APIs, reconciling portfolio and transaction history, and serving a real-time web dashboard of open positions, premiums, and expiries. More views: <a href="assets/tracker_wheeling.png">wheel trading tracker</a>.</p>
-      </div>
-      <div class="card reveal">
-        <div class="preview">
-          <a href="assets/meetingminds_en.png"><img src="assets/meetingminds_en.png" alt="MeetingMinds live session: transcript, streaming summary updates, Q&A answers and action items side by side" loading="lazy" /></a>
-        </div>
-        <div class="tag">ASR + LLM / BytePlus + OpenRouter</div>
-        <h3>MeetingMinds - live meeting assistant</h3>
-        <p>Live meeting assistant: captures audio, transcribes in real time with BytePlus ASR, and streams LLM-generated live summaries, role-aware flags, and Q&amp;A answers via OpenRouter - exporting the full meeting note to Obsidian. Handles English and Mandarin in the same meeting. More views: <a href="assets/meetingminds_zh.png">Mandarin session</a> &middot; <a href="https://github.com/Kicks81/meetingmind">GitHub</a>.</p>
-      </div>
-      <div class="card reveal">
-        <div class="preview">
-          <div class="embed">
-            <iframe src="https://www.youtube-nocookie.com/embed/RvuaH2XUFnE" title="Mixture of Experts Explained: Run a 35B AI Model on 8GB VRAM" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-        </div>
-        <div class="tag">YouTube channel / AI explainers</div>
-        <h3>Concept Explained - AI explainer videos</h3>
-        <p>Personal YouTube channel breaking down AI and agent-design concepts for a general audience. Featured video: <a href="https://youtu.be/RvuaH2XUFnE">"Mixture of Experts Explained: Run a 35B AI Model on 8GB VRAM"</a>. Full channel: <a href="https://www.youtube.com/@ConceptExplained-l1u">@ConceptExplained-l1u</a>.</p>
-      </div>
-      <div class="card reveal">
-        <div class="preview">
-          <a href="assets/Exrate_view.png"><img src="assets/PowerBI_exrate.jpg" alt="Currency-neutral performance dashboard screenshot" loading="lazy" /></a>
-        </div>
-        <div class="tag">Power BI / DAX</div>
-        <h3>Currency-neutral performance dashboard</h3>
-        <p>Separated operational performance from exchange-rate movement using advanced DAX, so management could see the improvement areas actually within their control.</p>
-      </div>
-      <div class="card reveal">
-        <div class="preview">
-          <a href="assets/PBIX_DAX_VIEW.png"><img src="assets/PBIX_DAX.jpeg" alt="Dynamic time intelligence dashboard screenshot" loading="lazy" /></a>
-        </div>
-        <div class="tag">Power BI / DAX</div>
-        <h3>Dynamic time intelligence dashboard</h3>
-        <p>Asset-performance dashboard built on dynamic time-intelligence DAX - MAX-based latest-month detection, YTD range filtering, and SWITCH-driven context-aware calculations for fast, flexible reporting.</p>
-      </div>
-      <div class="card reveal">
-        <div class="preview">
-          <a href="assets/ainews_front.png"><img src="assets/ainews_front.png" alt="AINewsDaily front page: newspaper-style AI news layout with top story, source filters, and market tickers in the masthead" loading="lazy" /></a>
-        </div>
-        <div class="tag">News aggregator / Node + Playwright</div>
-        <h3>AINewsDaily - AI news, newspaper style</h3>
-        <p>Self-hosted, newspaper-style AI &amp; tech news aggregator: Playwright scrapers pull from Hacker News, TechCrunch, ArXiv, Dev.to, and Hugging Face every 15 minutes, with AI-generated article summaries, source and time filters, and live market tickers in the masthead. More views: <a href="assets/ainews_grid.webp">section grid</a>.</p>
-      </div>
-      <div class="card reveal">
-        <div class="preview">
           <svg viewBox="0 0 820 860" role="img" aria-label="TaskRouter request flow: User to Planner, which splits the prompt into jobs. A deterministic Router picks each job's effort ladder, and the Dispatcher walks that ladder through Executor attempts from low effort up to a P0 ceiling model, escalating on failure. The Auditor checks the assembled result; failed jobs re-enter their ladder at the next attempt, otherwise the response returns to the User.">
             <defs>
               <marker id="trArrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
@@ -450,6 +392,64 @@
         <div class="tag">LLM orchestration / Python + ModernBERT</div>
         <h3>TaskRouter - multi-model AI orchestration engine</h3>
         <p>Automated request router: the Planner (an LLM seat) splits the prompt into jobs; a locally fine-tuned ModernBERT classifier (16 job types, 96%+ validation accuracy, ONNX int8) labels each one; a deterministic Router picks the fixed-table effort ladder for that job type; and the Dispatcher walks the ladder across 14 models from 11 providers, escalating effort on failure up to a fixed ceiling model. The Auditor checks each assembled milestone, and failed jobs re-enter their ladder at the next attempt.</p>
+      </div>
+      <div class="card reveal">
+        <div class="preview">
+          <div class="embed">
+            <iframe src="https://www.youtube-nocookie.com/embed/RvuaH2XUFnE" title="Mixture of Experts Explained: Run a 35B AI Model on 8GB VRAM" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="tag">YouTube channel / AI explainers</div>
+        <h3>Concept Explained - AI explainer videos</h3>
+        <p>Personal YouTube channel breaking down AI and agent-design concepts for a general audience. Featured video: <a href="https://youtu.be/RvuaH2XUFnE">"Mixture of Experts Explained: Run a 35B AI Model on 8GB VRAM"</a>. Full channel: <a href="https://www.youtube.com/@ConceptExplained-l1u">@ConceptExplained-l1u</a>.</p>
+      </div>
+      <div class="card reveal">
+        <div class="preview">
+          <a href="assets/ta_chart.png"><img src="assets/ta_chart.png" alt="Technical analysis platform: NVDA daily chart with EMA and Bollinger overlays, RSI, volume-profile levels, and TimesFM forecast marker" loading="lazy" /></a>
+        </div>
+        <div class="tag">AI trading platform / Python + React</div>
+        <h3>AI-assisted technical analysis platform</h3>
+        <p>Personal trading-analysis platform combining a vectorised backtesting engine, live trend, structure and volume signals, and options analytics - with a locally hosted LLM reading news sentiment and macro data into one unified dashboard. More views: <a href="assets/ta_volume.png">volume profile</a> &middot; <a href="assets/ta_predict.png">prediction log</a>.</p>
+      </div>
+      <div class="card reveal">
+        <div class="preview">
+          <a href="assets/tracker_expiry.png"><img src="assets/tracker_expiry.png" alt="Options portfolio tracker: positions grouped by expiration with strikes, current prices, probability OTM, and weekly exposure bar" loading="lazy" /></a>
+        </div>
+        <div class="tag">Python / Broker API</div>
+        <h3>Options portfolio tracker</h3>
+        <p>Python tracker for live option positions and P/L - pulling positions and quotes from broker APIs, reconciling portfolio and transaction history, and serving a real-time web dashboard of open positions, premiums, and expiries. More views: <a href="assets/tracker_wheeling.png">wheel trading tracker</a>.</p>
+      </div>
+      <div class="card reveal">
+        <div class="preview">
+          <a href="assets/meetingminds_en.png"><img src="assets/meetingminds_en.png" alt="MeetingMinds live session: transcript, streaming summary updates, Q&A answers and action items side by side" loading="lazy" /></a>
+        </div>
+        <div class="tag">ASR + LLM / BytePlus + OpenRouter</div>
+        <h3>MeetingMinds - live meeting assistant</h3>
+        <p>Live meeting assistant: captures audio, transcribes in real time with BytePlus ASR, and streams LLM-generated live summaries, role-aware flags, and Q&amp;A answers via OpenRouter - exporting the full meeting note to Obsidian. Handles English and Mandarin in the same meeting. More views: <a href="assets/meetingminds_zh.png">Mandarin session</a> &middot; <a href="https://github.com/Kicks81/meetingmind">GitHub</a>.</p>
+      </div>
+      <div class="card reveal">
+        <div class="preview">
+          <a href="assets/Exrate_view.png"><img src="assets/PowerBI_exrate.jpg" alt="Currency-neutral performance dashboard screenshot" loading="lazy" /></a>
+        </div>
+        <div class="tag">Power BI / DAX</div>
+        <h3>Currency-neutral performance dashboard</h3>
+        <p>Separated operational performance from exchange-rate movement using advanced DAX, so management could see the improvement areas actually within their control.</p>
+      </div>
+      <div class="card reveal">
+        <div class="preview">
+          <a href="assets/PBIX_DAX_VIEW.png"><img src="assets/PBIX_DAX.jpeg" alt="Dynamic time intelligence dashboard screenshot" loading="lazy" /></a>
+        </div>
+        <div class="tag">Power BI / DAX</div>
+        <h3>Dynamic time intelligence dashboard</h3>
+        <p>Asset-performance dashboard built on dynamic time-intelligence DAX - MAX-based latest-month detection, YTD range filtering, and SWITCH-driven context-aware calculations for fast, flexible reporting.</p>
+      </div>
+      <div class="card reveal">
+        <div class="preview">
+          <a href="assets/ainews_front.png"><img src="assets/ainews_front.png" alt="AINewsDaily front page: newspaper-style AI news layout with top story, source filters, and market tickers in the masthead" loading="lazy" /></a>
+        </div>
+        <div class="tag">News aggregator / Node + Playwright</div>
+        <h3>AINewsDaily - AI news, newspaper style</h3>
+        <p>Self-hosted, newspaper-style AI &amp; tech news aggregator: Playwright scrapers pull from Hacker News, TechCrunch, ArXiv, Dev.to, and Hugging Face every 15 minutes, with AI-generated article summaries, source and time filters, and live market tickers in the masthead. More views: <a href="assets/ainews_grid.webp">section grid</a>.</p>
       </div>
     </div>
   </div>
