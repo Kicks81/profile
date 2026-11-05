@@ -357,11 +357,95 @@
       </div>
       <div class="card reveal">
         <div class="preview">
-          <a href="assets/taskrouter_architecture.png"><img src="assets/taskrouter_architecture.png" alt="TaskRouter layered architecture: Planner splits requests into milestones, LLM Orchestrator coordinates the planning and audit loop, Deterministic Router picks the model per job type by fixed rules, Executor dispatches calls and enforces cost caps, Auditor verifies output and triggers retries" loading="lazy" /></a>
+          <svg viewBox="0 0 820 980" role="img" aria-label="TaskRouter request flow: User to Orchestrator (reword / HyDE) to Planner (decompose) to Router (deterministic) fanning out to Executors for Coding, Language and Design, merging back into Orchestrator, then Auditor verifies and either retries or returns the response to User.">
+            <defs>
+              <marker id="trArrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+                <path d="M0,0 L10,5 L0,10 z" fill="#0E6E68"/>
+              </marker>
+              <marker id="trArrowOchre" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+                <path d="M0,0 L10,5 L0,10 z" fill="#C57B33"/>
+              </marker>
+            </defs>
+            <rect x="0" y="0" width="820" height="980" fill="#FFFFFF"/>
+            <text x="410" y="26" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="11" letter-spacing="1.5" fill="#C57B33">TASKROUTER &#183; REQUEST FLOW</text>
+
+            <!-- connectors (drawn first, under boxes) -->
+            <line x1="410" y1="106" x2="410" y2="168" stroke="#0E6E68" stroke-width="2" marker-end="url(#trArrow)"/>
+            <text x="428" y="142" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10.5" fill="#5A626E">request</text>
+
+            <line x1="410" y1="226" x2="410" y2="288" stroke="#0E6E68" stroke-width="2" marker-end="url(#trArrow)"/>
+            <text x="428" y="262" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10.5" fill="#5A626E">reworded query</text>
+
+            <line x1="410" y1="346" x2="410" y2="408" stroke="#0E6E68" stroke-width="2" marker-end="url(#trArrow)"/>
+            <text x="428" y="382" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10.5" fill="#5A626E">subtasks</text>
+
+            <line x1="410" y1="466" x2="150" y2="508" stroke="#0E6E68" stroke-width="1.75" marker-end="url(#trArrow)"/>
+            <line x1="410" y1="466" x2="410" y2="508" stroke="#0E6E68" stroke-width="1.75" marker-end="url(#trArrow)"/>
+            <line x1="410" y1="466" x2="670" y2="508" stroke="#0E6E68" stroke-width="1.75" marker-end="url(#trArrow)"/>
+            <text x="410" y="488" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#5A626E">by job type</text>
+
+            <line x1="150" y1="576" x2="410" y2="638" stroke="#0E6E68" stroke-width="1.75" marker-end="url(#trArrow)"/>
+            <line x1="410" y1="576" x2="410" y2="638" stroke="#0E6E68" stroke-width="1.75" marker-end="url(#trArrow)"/>
+            <line x1="670" y1="576" x2="410" y2="638" stroke="#0E6E68" stroke-width="1.75" marker-end="url(#trArrow)"/>
+
+            <line x1="410" y1="696" x2="410" y2="758" stroke="#0E6E68" stroke-width="2" marker-end="url(#trArrow)"/>
+
+            <path d="M280,788 C120,788 120,668 278,668" fill="none" stroke="#C57B33" stroke-width="1.75" stroke-dasharray="5 4" marker-end="url(#trArrowOchre)"/>
+            <text x="98" y="732" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#C57B33" transform="rotate(-90 98 732)" text-anchor="middle">retry on fail</text>
+
+            <line x1="410" y1="816" x2="410" y2="878" stroke="#0E6E68" stroke-width="2" marker-end="url(#trArrow)"/>
+            <text x="428" y="852" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10.5" fill="#5A626E">response</text>
+
+            <!-- USER (request) -->
+            <rect x="280" y="50" width="260" height="56" rx="10" fill="#F6F4EF" stroke="#191C22" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <text x="410" y="84" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="15" fill="#191C22">USER</text>
+
+            <!-- ORCHESTRATOR (reword) -->
+            <rect x="280" y="170" width="260" height="56" rx="10" fill="#E7F0EF" stroke="#0E6E68" stroke-width="1.5"/>
+            <text x="410" y="194" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="15" fill="#191C22">ORCHESTRATOR</text>
+            <text x="410" y="211" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10.5" fill="#5A626E">rewords query &#183; HyDE</text>
+
+            <!-- PLANNER -->
+            <rect x="280" y="290" width="260" height="56" rx="10" fill="#E7F0EF" stroke="#0E6E68" stroke-width="1.5"/>
+            <text x="410" y="314" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="15" fill="#191C22">PLANNER</text>
+            <text x="410" y="331" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10.5" fill="#5A626E">decomposes into milestones</text>
+
+            <!-- ROUTER -->
+            <rect x="280" y="410" width="260" height="56" rx="10" fill="#E7F0EF" stroke="#0E6E68" stroke-width="1.5"/>
+            <text x="410" y="434" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="15" fill="#191C22">ROUTER</text>
+            <text x="410" y="451" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10.5" fill="#5A626E">deterministic &#183; picks executor</text>
+
+            <!-- EXECUTORS -->
+            <rect x="40" y="510" width="220" height="66" rx="10" fill="#FFFFFF" stroke="#C57B33" stroke-width="1.5"/>
+            <text x="150" y="538" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="13.5" fill="#191C22">EXECUTOR &#183; CODING</text>
+            <text x="150" y="556" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#5A626E">code &amp; scripts</text>
+
+            <rect x="300" y="510" width="220" height="66" rx="10" fill="#FFFFFF" stroke="#C57B33" stroke-width="1.5"/>
+            <text x="410" y="538" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="13.5" fill="#191C22">EXECUTOR &#183; LANGUAGE</text>
+            <text x="410" y="556" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#5A626E">writing &amp; analysis</text>
+
+            <rect x="560" y="510" width="220" height="66" rx="10" fill="#FFFFFF" stroke="#C57B33" stroke-width="1.5"/>
+            <text x="670" y="538" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="13.5" fill="#191C22">EXECUTOR &#183; DESIGN</text>
+            <text x="670" y="556" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="#5A626E">UI &amp; visual assets</text>
+
+            <!-- ORCHESTRATOR (merge) -->
+            <rect x="280" y="640" width="260" height="56" rx="10" fill="#E7F0EF" stroke="#0E6E68" stroke-width="1.5"/>
+            <text x="410" y="664" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="15" fill="#191C22">ORCHESTRATOR</text>
+            <text x="410" y="681" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10.5" fill="#5A626E">merges executor results</text>
+
+            <!-- AUDITOR -->
+            <rect x="280" y="760" width="260" height="56" rx="10" fill="#E7F0EF" stroke="#0E6E68" stroke-width="1.5"/>
+            <text x="410" y="784" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="15" fill="#191C22">AUDITOR</text>
+            <text x="410" y="801" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10.5" fill="#5A626E">verifies output &#183; triggers retry</text>
+
+            <!-- USER (response) -->
+            <rect x="280" y="880" width="260" height="56" rx="10" fill="#F6F4EF" stroke="#191C22" stroke-width="1.5" stroke-dasharray="4 3"/>
+            <text x="410" y="914" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="15" fill="#191C22">USER</text>
+          </svg>
         </div>
         <div class="tag">LLM orchestration / Python + ModernBERT</div>
         <h3>TaskRouter - multi-model AI orchestration engine</h3>
-        <p>Automated request router: a Planner/Auditor LLM loop splits prompts into milestones, a locally fine-tuned ModernBERT classifier (16 job types, 96%+ validation accuracy, ONNX int8) labels each job, and a dispatcher sends work across 14 models from 11 providers under per-run cost governance with automatic retry/recovery.</p>
+        <p>Automated request router: the Orchestrator rewords the incoming request (HyDE) before handing it to the Planner, which decomposes it into milestones. A deterministic Router picks the right executor per job type (coding / language / design) via a locally fine-tuned ModernBERT classifier (16 job types, 96%+ validation accuracy, ONNX int8); results merge back through the Orchestrator and the Auditor verifies output, triggering a retry on failure.</p>
       </div>
     </div>
   </div>
