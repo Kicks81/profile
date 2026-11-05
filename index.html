@@ -355,6 +355,14 @@
         <h3>AINewsDaily - AI news, newspaper style</h3>
         <p>Self-hosted, newspaper-style AI &amp; tech news aggregator: Playwright scrapers pull from Hacker News, TechCrunch, ArXiv, Dev.to, and Hugging Face every 15 minutes, with AI-generated article summaries, source and time filters, and live market tickers in the masthead. More views: <a href="assets/ainews_grid.webp">section grid</a>.</p>
       </div>
+      <div class="card reveal">
+        <div class="preview">
+          <a href="assets/taskrouter_architecture.png"><img src="assets/taskrouter_architecture.png" alt="TaskRouter architecture: Dispatcher hub connected to Planner, Classifier and Auditor nodes, routing jobs out to multiple AI model providers" loading="lazy" /></a>
+        </div>
+        <div class="tag">LLM orchestration / Python + ModernBERT</div>
+        <h3>TaskRouter - multi-model AI orchestration engine</h3>
+        <p>Automated request router: a Planner/Auditor LLM loop splits prompts into milestones, a locally fine-tuned ModernBERT classifier (16 job types, 96%+ validation accuracy, ONNX int8) labels each job, and a dispatcher sends work across 14 models from 11 providers under per-run cost governance with automatic retry/recovery.</p>
+      </div>
     </div>
   </div>
 </section>
