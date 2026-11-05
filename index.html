@@ -357,7 +357,7 @@
       </div>
       <div class="card reveal">
         <div class="preview">
-          <a href="assets/taskrouter_architecture.png"><img src="assets/taskrouter_architecture.png" alt="TaskRouter architecture: Dispatcher hub connected to Planner, Classifier and Auditor nodes, routing jobs out to multiple AI model providers" loading="lazy" /></a>
+          <a href="assets/taskrouter_architecture.png"><img src="assets/taskrouter_architecture.png" alt="TaskRouter layered architecture: Planner splits requests into milestones, LLM Orchestrator coordinates the planning and audit loop, Deterministic Router picks the model per job type by fixed rules, Executor dispatches calls and enforces cost caps, Auditor verifies output and triggers retries" loading="lazy" /></a>
         </div>
         <div class="tag">LLM orchestration / Python + ModernBERT</div>
         <h3>TaskRouter - multi-model AI orchestration engine</h3>
